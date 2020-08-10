@@ -7,31 +7,17 @@
     <link rel="stylesheet" type="text/css" href="homepage.css">
   </head>
   <body class="home">
-    <h1>Code Societies</h1>
+    <h1>Digital Love Languages Webzine</h1>
 
-    <p>School for Poetic Computation (SFPC)’s winter intensive is an introduction to re-introducing yourselves to computers. How do different platforms and processes—including algorithms, surveillance, social media, infrastructure, and interface—yield distinct modes of seeing, thinking, feeling, and reinforce existing systems of power? Code Societies centers understanding technology as social and the social as political technology. We will engage with code, and the ways code acts on our bodies and networks, equally as subject and as medium. Together we will build new codes made of the the digital, the social, and the ritual, on a foundation of shared experience and a commitment to learning with care together. Code Societies is about redrawing the divisions that make us and unmake us. We’ll begin by challenging the division between those who code software and those who are coded by it.<br>
-    </p>
-    <img class="knot one" src="knot-3.png" "Code Societies Knot Drawing" />
-    <img class="knot two" src="knot-2.png" "Code Societies Knot Drawing" />
-    <img class="knot three" src="knot-1.png" "Code Societies Knot Drawing" />
-    <p>
-      <a class="inline" target="_blank" href="https://melanie-hoff.com/">Melanie Hoff</a> is the Code Societies Lead Organizer, <a class="inline" target="_blank" href="https://www.netabomani.com/">Neta Bomani</a> and <a class="inline" target="_blank" href="https://www.marceldochamp.net/">Emma Rae Norton</a> are the Assistant Organizers, and <a class="inline" target="_blank" href="http://taeyoonchoi.com">Taeyoon Choi</a> is the Session Advisor.
-      <br><br>
-      This website is designed by Emma Rae Norton.
+    <p>What if all the software we used was made by people who love us?
+      <br>
     </p>
 
-    <a class="fullwidth" href="/code-societies/blog">Blog</a>
-    <br><br>
-    <a class="fullwidth" href="/code-societies/oral-history">Oral History</a>
-    <br><br>
-    <a class="fullwidth" href="/code-societies/2020">2020 Syllabi</a>
-    <a class="fullwidth" href="/code-societies/2019">2019 Syllabi</a>
-    <a class="fullwidth" href="/code-societies/2018">2018 Syllabi</a>
-    <br><br>
-    <a class="fullwidth" href="https://sfpc.io/codesocieties2020/">About SFPC</a>
+
+    <a class="fullwidth" href="lovelanguages.melaniehoff.com/">About Digital Love Languages</a>
     <br><br>
 
-    <h4>Guiding Resources:</h4>
+    <h4>Liberatory Learning Environments:</h4>
     <div id="orientation-blocks">
     </div>
 
@@ -50,7 +36,7 @@
       orientationWrapper.appendChild(loading);
 
       axiosArena.defaults.headers.Authorization = 'Bearer ---' ;
-      axiosArena.get("channels/code-societies-winter-2020-guiding-resources?per=100").then(response => {
+      axiosArena.get("channels/love-letters-to-a-speculative-liberatory-learning-environment-tuesday?per=100").then(response => {
         console.log(response);
         if (response.data && response.data.contents.length > 1) {
           orientationWrapper.removeChild(loading);
