@@ -24,6 +24,14 @@ axiosArena.get("channels/digital-love-looks?per=100").then(response => {
   }
 });
 
+
+// var list = document.getElementsByClassName("block");
+// console.log(list);
+//
+// for (let i=0; i<list.length; i++) {
+//   // var randpos = randomIntFromInterval(100, 2000)
+// }
+
 function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -50,7 +58,6 @@ function createOrientation(orientationData) {
 
     //create image
     if (orientationData[i].image) {
-
       var randWidth = randomIntFromInterval(60, 650)
       const image = document.createElement("img");
       image.className = "image";
