@@ -57,6 +57,14 @@ body.home h4 {
   max-width: 670px;
   font-family: Minipax;
 }
+
+.loading {
+  font-size: 3em;
+  letter-spacing: .09em;
+  color: chartreuse;
+}
+
+
 #orientation-blocks {
   display: flex;
   align-items: stretch;
@@ -64,13 +72,9 @@ body.home h4 {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.loading {
-  font-size: 3em;
-  letter-spacing: .09em;
-  color: chartreuse;
-}
-.block,
-.channel {
+
+
+.block, .channel {
   display: flex !important;
   padding: 15px;
   align-items: stretch;
@@ -81,46 +85,26 @@ body.home h4 {
   border: none !important;
   font-size: 1.325em !important;
 }
-a.block,
-a.channel {
+
+a.block, a.channel {
   cursor: pointer;
   border: none !important;
   font-size: 1em !important;
   text-align: center;
 }
+
 a.channel {
   border: 2px solid white !important;
   font-size: 2em !important;
   min-height: 300px;
 }
+
 .block img {
   display: block;
   margin: 0 auto 10px auto;
+  border-radius: 50%;
 }
 
-
-.knot {
-  position: fixed;
-  width: 100%;
-  display: block;
-  max-width: 15%;
-}
-.knot.one {
-  top: 5%;
-  right: 5%;
-}
-
-.knot.two {
-  top: 35%;
-  left: -10%;
-  max-width: 20%;
-}
-
-.knot.three {
-  bottom: 3%;
-  right: -2%;
-  max-width: 17%;
-}
 
 /* DESKTOP ONLY STYLES!! */
 @media only screen and (min-width: 768px) {
