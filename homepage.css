@@ -23,7 +23,8 @@ h1 {
     color: #3111B9;
     font-family: violet;
     padding: 20px;
-    width: 100%;
+    width: 3000px;
+    height: 3000px;
     margin: 0;
     word-break: break-word;
   }
@@ -100,7 +101,7 @@ a.channel {
 }
 
 .block img {
-  margin: 0 auto 10px auto;
+  margin: 0 0px 10px 0px;
 }
 
 
@@ -120,4 +121,8 @@ a.channel {
   .knot.three {
     bottom: -8%;
   }
+}
+
+.blobImage {
+  position: relative;
 }

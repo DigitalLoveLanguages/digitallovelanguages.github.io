@@ -18,44 +18,62 @@ axiosArena.get("channels/webzine-landscape-blob-pngs?per=100").then(response => 
   console.log(response);
   if (response.data && response.data.contents.length > 1) {
     orientationWrapper.removeChild(loading);
-    createOrientation(response.data.contents);
+    // for testing purposes, triple the length of blocks
+    var blocks = [];
+     for (let i=0; i<response.data.contents.length*3; i++) {
+       var j = i%response.data.contents.length;
+       blocks.push(response.data.contents[j])
+     }
+     // then place the blocks
+    randomlyPlaceBlobs(blocks);
   } else {
 
   }
 });
 
 
+
+
 function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function createOrientation(orientationData) {
-  for (let i=0; i<orientationData.length; i++) {
+
+function randomlyPlaceBlobs(arenaBlocks) {
+  for (let i=0; i<arenaBlocks.length; i++) {
     //create block
     let block = document.createElement("div");
     block.className = "block";
 
-    if (orientationData[i].source) {
+    if (arenaBlocks[i].source) {
       block = document.createElement("a");
       block.className = "block";
-      block.href = orientationData[i].source.url;
+      block.href = arenaBlocks[i].source.url;
       block.target = "_blank";
     }
 
-    if (orientationData[i].class === "Channel") {
+    if (arenaBlocks[i].class === "Channel") {
       block = document.createElement("a");
       block.className = "channel";
-      block.href = `https://are.na/${orientationData[i].user.slug}/${orientationData[i].slug}`;
+      block.href = `https://are.na/${arenaBlocks[i].user.slug}/${arenaBlocks[i].slug}`;
       block.target = "_blank";
     }
 
     //create image
-    if (orientationData[i].image) {
+    if (arenaBlocks[i].image) {
       var randWidth = randomIntFromInterval(60, 650)
       const image = document.createElement("img");
-      image.className = "image";
-      image.src = orientationData[i].image.square.url;
+      image.className = "image blobImage";
+      image.src = arenaBlocks[i].image.square.url;
       $(image).width(randWidth);
+
+      // move the blob by a random position to make things a bit less grid-like
+      var delta = 500;
+      var moveLeftPixels = randomIntFromInterval(0, delta);
+      var moveTopPixels = randomIntFromInterval(0, delta);
+      $(image).css({'left': moveLeftPixels, 'top': moveTopPixels});
+
+      // append to html
       block.appendChild(image);
 
     }
