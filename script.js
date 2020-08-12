@@ -14,7 +14,7 @@ loading.innerHTML = 'loading...';
 orientationWrapper.appendChild(loading);
 
 axiosArena.defaults.headers.Authorization = 'Bearer ---' ;
-axiosArena.get("channels/digital-love-looks?per=100").then(response => {
+axiosArena.get("channels/webzine-landscape-blob-pngs?per=100").then(response => {
   console.log(response);
   if (response.data && response.data.contents.length > 1) {
     orientationWrapper.removeChild(loading);
@@ -24,13 +24,6 @@ axiosArena.get("channels/digital-love-looks?per=100").then(response => {
   }
 });
 
-
-// var list = document.getElementsByClassName("block");
-// console.log(list);
-//
-// for (let i=0; i<list.length; i++) {
-//   // var randpos = randomIntFromInterval(100, 2000)
-// }
 
 function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
