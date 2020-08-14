@@ -15,11 +15,72 @@ h1 {
   font-family: VG5000;
 }
 
+/* CSS files add styling rules to your content */
+html {
+/*   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
+
+
+}
+
+.css-selector {
+    background: linear-gradient(177deg, #3f87a6, #ebf8e1, #f69d3c);
+    background-size: 600% 600%;
+
+
+    -webkit-animation: AnimationName 80s ease infinite;
+    -moz-animation: AnimationName 80s ease infinite;
+    animation: AnimationName 80s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+
+
+
+
+.gradient-spin {
+  left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
+  width: 200em;
+  height: 200em;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(135deg, orange 50%, cyan);
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
 
 
   body {
 
-    background: #CECECE;
     color: #3111B9;
     font-family: violet;
     padding: 20px;
