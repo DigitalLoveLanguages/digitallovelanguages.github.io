@@ -22,6 +22,8 @@ html {
 
 }
 
+
+
 .css-selector {
     background: linear-gradient(177deg, #3f87a6, #ebf8e1, #f69d3c);
     background-size: 600% 600%;
@@ -125,6 +127,14 @@ body.home h4 {
   margin: 25px 0;
   max-width: 670px;
   font-family: Minipax;
+}
+
+h1 img{
+  width: 90vw;
+}
+
+.fullwidth {
+  width: 90vw;
 }
 
 .loading {
