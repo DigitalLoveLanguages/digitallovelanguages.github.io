@@ -9,11 +9,11 @@ font-family: 'VG5000';
 src: url('fonts/VG5000/VG5000-Regular_web.woff') format('woff');
 }
 
-h1 {
+/* h1 {
   margin-bottom: 18px;
   font-size: 4.5em;
   font-family: VG5000;
-}
+} */
 
 /* CSS files add styling rules to your content */
 html {
@@ -91,13 +91,20 @@ margin-right: auto;
   }
 
 
-body.home a {
-  font-family: VG5000;
-  /* font-size: 1.325em; */
-  border-bottom: 3px solid #F40305;
-  display: block;
-  margin-bottom: 12px;
-}
+  body.home a {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1.325em;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F40305;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+a:visited {
+  text-decoration: none;
+  color:#3111B9; }
 
 a:hover {
   color: black;
