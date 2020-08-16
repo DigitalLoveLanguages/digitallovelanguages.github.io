@@ -198,5 +198,11 @@ a.channel {
   padding: 20px;
   background-color: lightblue;
   display: none;
-  position: absolute;
+  position: relative;
+  max-width: 400px;
+  top: -140px;
+}
+
+.popupBlock {
+  display: block;
 }

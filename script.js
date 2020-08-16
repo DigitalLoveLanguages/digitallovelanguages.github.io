@@ -1,3 +1,22 @@
+
+
+
+
+/**
+ * helper function to shuffle an array in place.
+ */
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+
 $(document).ready(function() {
   console.log( "ready!" );
 
@@ -51,18 +70,13 @@ $(document).ready(function() {
             var linksWrapper = parentBlock.find('.linkswrapper');
             // toggle visibility of links wrapper
             linksWrapper.toggle();
-            // also select three random blocks to put in linkswrapper
-            var randomSample = getRandomElementsFromArray(availableBlocks, 3);
-            // clear links wrapper
-            linksWrapper.empty();
-            // then populate it
-            for (let i=0; i<3; i++) {
-                var block= randomSample[i]
-                var blockDiv = document.createElement("div");
-                blockDiv.innerHTML = block.title;
-                linksWrapper.append(blockDiv);
+            // if linksWrapper is empty, then add blocks to it
+            if ($(linksWrapper).is(':empty')){
+              // also select three random blocks to put in linkswrapper
+              var randomSample = getRandomElementsFromArray(availableBlocks, 3);
+              // clear links wrapper
+              populateArenaPopup(linksWrapper, randomSample);
             }
-
         });
     } else {
         console.log('++ there was an error with are.na api')
@@ -75,8 +89,9 @@ $(document).ready(function() {
   // so that when someone clicks a blob, no requests to the arena API are needed
   function getBlocksPool() {
       const listOfChannels = [
-          'webzine-landscape-blob-pngs',
-          'digital-love-languages-examples'
+          // 'webzine-landscape-blob-pngs',
+          'digital-love-languages-examples',
+          'love-letters-to-a-speculative-liberatory-learning-environment'
       ];
       for (let i=0; i<listOfChannels.length; i++) {
           var channel = listOfChannels[i];
@@ -95,13 +110,14 @@ $(document).ready(function() {
   getBlocksPool();
   // now availableBlocks is filled with blocks
 
-
   function randomIntFromInterval(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-
   function randomlyPlaceBlobs(arenaBlocks) {
+    // first lets randomly shuffle the blocks, so they are not always in the same order
+    shuffle(arenaBlocks);
+    // then lets loop through them
     for (let i=0; i<arenaBlocks.length; i++) {
       //create block
       let block = document.createElement("div");
@@ -130,8 +146,10 @@ $(document).ready(function() {
         $(image).width(randWidth);
 
         // move the blob by a random position to make things a bit less grid-like
-        var delta = 500;
-        var moveLeftPixels = randomIntFromInterval(0, delta);
+        var delta = 300;
+        // var moveLeftPixels = randomIntFromInterval(0, 3000);
+        // var moveTopPixels = randomIntFromInterval(200, 8000);
+             var moveLeftPixels = randomIntFromInterval(0, delta);
         var moveTopPixels = randomIntFromInterval(0, delta);
         $(block).css({'left': moveLeftPixels, 'top': moveTopPixels});
 
@@ -161,6 +179,46 @@ $(document).ready(function() {
 
       orientationWrapper.appendChild(block);
     }
+  }
+
+  // helper function which inserts arena blocks into the popup dialog for that blob
+  // including images and descriptions
+  function populateArenaPopup(linksWrapper, blocks){
+      // for each block, create a div element for it in the links wrapper appropriately
+      for (let i=0; i<blocks.length; i++) {
+          var block= blocks[i]
+          var blockWrapper = document.createElement("div");
+          block.className = "popupBlock";
+
+          // if the block is a link, then also turn this into a link
+          if (block.source) {
+              blockWrapper = document.createElement("a");
+              blockWrapper.className = "popupBlock";
+              blockWrapper.href = block.source.url;
+              blockWrapper.target = "_blank";
+          }
+
+          // if its an image
+          if (block.image) {
+              const image = document.createElement("img");
+              image.className = "popupImage";
+              image.src = block.image.square.url;
+              $(image).width('100%');
+              // append to html
+              blockWrapper.appendChild(image);
+          }
+
+          // if there is a description
+           if (block.description) {
+              const descriptionWrapper = document.createElement("div");
+              descriptionWrapper.className = "popupDescription";
+              descriptionWrapper.innerHTML = block.description;
+              // append to html
+              blockWrapper.appendChild(descriptionWrapper);
+          }
+
+          linksWrapper.append(blockWrapper);
+      }
   }
 
 });
