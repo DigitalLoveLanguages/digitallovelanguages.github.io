@@ -9,29 +9,16 @@ font-family: 'VG5000';
 src: url('fonts/VG5000/VG5000-Regular_web.woff') format('woff');
 }
 
-/* h1 {
-  margin-bottom: 18px;
-  font-size: 4.5em;
-  font-family: VG5000;
-} */
-
-/* CSS files add styling rules to your content */
-html {
-/*   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
-
-
-}
-
 
 
 .css-selector {
-    background: linear-gradient(177deg, #3f87a6, #ebf8e1, #f69d3c);
+
+    background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff);
+    /* background-image: url("pool3.png"); */
     background-size: 600% 600%;
-
-
-    -webkit-animation: AnimationName 80s ease infinite;
-    -moz-animation: AnimationName 80s ease infinite;
-    animation: AnimationName 80s ease infinite;
+    -webkit-animation: AnimationName 190s ease infinite;
+    -moz-animation: AnimationName 190s ease infinite;
+    animation: AnimationName 190s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -183,6 +170,10 @@ a.channel {
   margin: 0 0px 10px 0px;
 }
 
+.shadowfilter {
+	-webkit-filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.6));
+}
+
 
 /* DESKTOP ONLY STYLES!! */
 @media only screen and (min-width: 768px) {
@@ -216,10 +207,14 @@ a.channel {
   background-color: lightblue;
   display: none;
   position: relative;
-  max-width: 400px;
+  max-width: 600px;
   top: -140px;
 }
 
 .popupBlock {
   display: block;
+}
+
+.popupDescription {
+  padding-bottom: 2.5em;
 }

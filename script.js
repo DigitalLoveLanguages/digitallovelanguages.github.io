@@ -90,8 +90,17 @@ $(document).ready(function() {
   function getBlocksPool() {
       const listOfChannels = [
           // 'webzine-landscape-blob-pngs',
-          'digital-love-languages-examples',
-          'love-letters-to-a-speculative-liberatory-learning-environment'
+          'digital-love-projects-ephemera',
+          'love-letters-to-a-speculative-liberatory-learning-environment',
+          'code-as-a-gift-idea-sketches',
+          'people-wednesday',
+          'people-tuesday',
+          'folder-poetry-tuesday',
+          'folder-poetry-wednesday',
+          'passing-notes-wednesday',
+          'passing-notes-tuesday',
+          'digital-love-languages',
+          'learning-growing-reaching-extending'
       ];
       for (let i=0; i<listOfChannels.length; i++) {
           var channel = listOfChannels[i];
@@ -123,30 +132,33 @@ $(document).ready(function() {
       let block = document.createElement("div");
       block.className = "block";
 
-      if (arenaBlocks[i].source) {
-        block = document.createElement("a");
-        block.className = "block";
-        block.href = arenaBlocks[i].source.url;
-        block.target = "_blank";
-      }
 
-      if (arenaBlocks[i].class === "Channel") {
-        block = document.createElement("a");
-        block.className = "channel";
-        block.href = `https://are.na/${arenaBlocks[i].user.slug}/${arenaBlocks[i].slug}`;
-        block.target = "_blank";
-      }
+// we dont technically need this because this all about the blobbs which are all images
+      // if (arenaBlocks[i].source) {
+      //   block = document.createElement("a");
+      //   block.className = "block";
+      //   block.href = arenaBlocks[i].source.url;
+      //   block.target = "_blank";
+      // }
+      //
+      // if (arenaBlocks[i].class === "Channel") {
+      //   block = document.createElement("a");
+      //   block.className = "channel";
+      //   block.href = `https://are.na/${arenaBlocks[i].user.slug}/${arenaBlocks[i].slug}`;
+      //   block.target = "_blank";
+      // }
 
       //create image
       if (arenaBlocks[i].image) {
-        var randWidth = randomIntFromInterval(60, 650)
+        var randWidth = randomIntFromInterval(60, 500)
         const image = document.createElement("img");
-        image.className = "image blobImage";
-        image.src = arenaBlocks[i].image.square.url;
+        image.className = "image blobImage shadowfilter";
+        // console.log(arenaBlocks[i].image.original.url);
+        image.src = arenaBlocks[i].image.original.url;
         $(image).width(randWidth);
 
         // move the blob by a random position to make things a bit less grid-like
-        var delta = 300;
+        var delta = 400;
         // var moveLeftPixels = randomIntFromInterval(0, 3000);
         // var moveTopPixels = randomIntFromInterval(200, 8000);
              var moveLeftPixels = randomIntFromInterval(0, delta);
@@ -202,7 +214,7 @@ $(document).ready(function() {
           if (block.image) {
               const image = document.createElement("img");
               image.className = "popupImage";
-              image.src = block.image.square.url;
+              image.src = block.image.original.url;
               $(image).width('100%');
               // append to html
               blockWrapper.appendChild(image);
