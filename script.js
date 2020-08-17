@@ -84,7 +84,7 @@ $(document).ready(function() {
             e.preventDefault();
             console.log('++ links wrapper clicked');
             $(this).toggle();
-        })
+        });
     } else {
         console.log('++ there was an error with are.na api')
     }
@@ -239,6 +239,13 @@ $(document).ready(function() {
           }
 
           // if it has content
+           if (block.content) {
+              const contentWrapper = document.createElement("div");
+              contentWrapper.className = "popupContent";
+              contentWrapper.innerHTML = block.content;
+              // append to html
+              blockWrapper.appendChild(contentWrapper);
+          }
 
           // if there is a description
            if (block.description) {
@@ -250,10 +257,15 @@ $(document).ready(function() {
           }
 
            // filter out empty blocks
-          if (!block.image || !block.description) {
+          if (!block.image || !block.description || !block.content) {
             linksWrapper.append(blockWrapper);
           }
       }
+      // finally set popupChannelTitle click function
+    $('.popupChannelTitle').click(function(e) {
+        console.log('++ channel title clicked');
+        e.stopPropagation();
+    });
   }
 
 });
