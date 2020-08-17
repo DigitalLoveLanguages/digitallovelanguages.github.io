@@ -77,10 +77,12 @@ margin-right: auto;
     height: 3000px;
     margin: 0;
     word-break: break-word;
+
+    cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
   }
 
 
-  body.home a {
+   a.mainLink {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1.325em;
     text-transform: uppercase;
@@ -100,7 +102,7 @@ a:hover {
   border-color: mediumpurple;
 }
 
-body.home p {
+p {
   font-size: 1.525em;
   margin: 25px 0 65px 0;
   max-width: 670px;
@@ -109,7 +111,7 @@ body.home p {
   z-index: 10;
 }
 
-body.home h4 {
+ h4 {
   font-size: 3.525em;
   margin: 25px 0;
   max-width: 670px;
@@ -121,7 +123,7 @@ h1 img{
 }
 
 .fullwidth {
-  width: 90vw;
+  width: 100%;
 }
 
 .loading {
@@ -141,7 +143,6 @@ h1 img{
 
 
 .block, .channel {
-  display: flex !important;
   padding: 15px;
   align-items: stretch;
   justify-content: center;
@@ -151,6 +152,7 @@ h1 img{
   border: none !important;
   font-size: 1.325em !important;
   position: relative;
+  height: 400px;
 }
 
 a.block, a.channel {
@@ -210,11 +212,27 @@ a.channel {
   max-width: 600px;
   top: -140px;
 }
+.linkswrapper:hover {
+  cursor: pointer;
+}
 
 .popupBlock {
   display: block;
+    padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid yellow;
+}
+.popupBlock:hover {
+    border-bottom: 1px solid yellow;
 }
 
 .popupDescription {
   padding-bottom: 2.5em;
+}
+
+.popupChannelTitle {
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    color: blue;
 }

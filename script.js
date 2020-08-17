@@ -55,6 +55,7 @@ $(document).ready(function() {
       var blocks = [];
        for (let i=0; i<response.data.contents.length*3; i++) {
          var j = i%response.data.contents.length;
+         // then add to the list of blocks
          blocks.push(response.data.contents[j])
        }
        // then place the blocks
@@ -78,6 +79,12 @@ $(document).ready(function() {
               populateArenaPopup(linksWrapper, randomSample);
             }
         });
+        // use the same click function for clicking the wrapper, not just the blob image
+        $('.linkswrapper').click(function(e) {
+            e.preventDefault();
+            console.log('++ links wrapper clicked');
+            $(this).toggle();
+        })
     } else {
         console.log('++ there was an error with are.na api')
     }
@@ -110,6 +117,10 @@ $(document).ready(function() {
             console.log(response);
             if (response.data && response.data.contents.length > 1) {
                for (let i=0; i<response.data.contents.length; i++) {
+                 // set the channel title to be part of the block so we can access it later
+                 response.data.contents[i].channelTitle = response.data.title;
+                 response.data.contents[i].channelSlug = response.data.slug;
+                 // then add it to the queue
                  availableBlocks.push(response.data.contents[i])
                }
             }
@@ -161,7 +172,7 @@ $(document).ready(function() {
         var delta = 400;
         // var moveLeftPixels = randomIntFromInterval(0, 3000);
         // var moveTopPixels = randomIntFromInterval(200, 8000);
-             var moveLeftPixels = randomIntFromInterval(0, delta);
+             var moveLeftPixels = randomIntFromInterval(0, delta/2);
         var moveTopPixels = randomIntFromInterval(0, delta);
         $(block).css({'left': moveLeftPixels, 'top': moveTopPixels});
 
@@ -200,7 +211,7 @@ $(document).ready(function() {
       for (let i=0; i<blocks.length; i++) {
           var block= blocks[i]
           var blockWrapper = document.createElement("div");
-          block.className = "popupBlock";
+          blockWrapper.className = "popupBlock";
 
           // if the block is a link, then also turn this into a link
           if (block.source) {
@@ -209,6 +220,13 @@ $(document).ready(function() {
               blockWrapper.href = block.source.url;
               blockWrapper.target = "_blank";
           }
+
+          // append title of chanel
+          const titleWrapper = document.createElement('a');
+          titleWrapper.className = 'popupChannelTitle'
+          titleWrapper.href = 'http://are.na/channels/' + block.channelSlug;
+          titleWrapper.innerHTML = block.channelTitle;
+          blockWrapper.appendChild(titleWrapper);
 
           // if its an image
           if (block.image) {
@@ -220,6 +238,8 @@ $(document).ready(function() {
               blockWrapper.appendChild(image);
           }
 
+          // if it has content
+
           // if there is a description
            if (block.description) {
               const descriptionWrapper = document.createElement("div");
@@ -229,7 +249,10 @@ $(document).ready(function() {
               blockWrapper.appendChild(descriptionWrapper);
           }
 
-          linksWrapper.append(blockWrapper);
+           // filter out empty blocks
+          if (!block.image || !block.description) {
+            linksWrapper.append(blockWrapper);
+          }
       }
   }
 
