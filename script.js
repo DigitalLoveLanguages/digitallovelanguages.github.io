@@ -97,11 +97,9 @@ $(document).ready(function() {
       'love-letters-to-a-speculative-liberatory-learning-environment',
       'code-as-a-gift',
       'digital-love-looks',
-      'people-r1w1odycp2i',
       'people-cdxyphwj0lo',
       'folder-poetry-fm8h1k8vsfk',
-      'folder-poetry-4ds7cifq2do',
-      'passing-notes',
+      'digital-love-languages-quotes',
       'passing-notes-lepghojthjg',
       // 'digital-love-languages',
       'learning-growing-reaching-extending'
