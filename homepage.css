@@ -1,4 +1,9 @@
 
+/* border: 4px solid #e3fd02;
+padding: 20px;
+background-color: #3110B8; */
+
+
 @font-face {
 font-family: 'Minipax';
 src: url('fonts/Minipax/Minipax-Regular.woff') format('woff');
@@ -202,11 +207,20 @@ a.channel {
   cursor: pointer;
 }
 
+.popupContent {
+  color: white;
+    margin-top: 14px;
+    padding: 1em;
+    border: 2px dashed white;
+}
+
+
+
 .linkswrapper {
   z-index: 10;
-  border: 4px solid blue;
+  border: 4px solid #e3fd02;
   padding: 20px;
-  background-color: lightblue;
+  background-color: #3110B8;
   display: none;
   position: relative;
   max-width: 600px;
@@ -228,14 +242,18 @@ a.channel {
 
 .popupDescription {
   padding-bottom: 2.5em;
+  color: white;
 }
 
 .popupChannelTitle {
     font-size: 14px;
     display: block;
     text-decoration: none;
-    color: blue;
+    color: #3110B8;
     margin-bottom: 8px;
+    background-color: #e3fd02;
+    width: fit-content;
+    padding: 3px;
 }
 
 .moth-1 {
