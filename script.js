@@ -103,7 +103,7 @@ $(document).ready(function() {
       'folder-poetry-4ds7cifq2do',
       'passing-notes',
       'passing-notes-lepghojthjg',
-      'digital-love-languages',
+      // 'digital-love-languages',
       'learning-growing-reaching-extending'
     ];
     for (let i = 0; i < listOfChannels.length; i++) {
