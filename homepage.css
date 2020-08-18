@@ -269,9 +269,8 @@ font-family: 'Roboto Mono', monospace;
 
 .moth-1 {
   position: absolute;
-  bottom: 600px;
-  left: 900px;
-  top:2000px;
+  left: 300px;
+  top:1500px;
   width: 300px;
   height: 300px;
 }
@@ -279,8 +278,7 @@ font-family: 'Roboto Mono', monospace;
 
 .moth-2 {
   position: absolute;
-  bottom: 600px;
-  left: 200px;
+  left: 600px;
   top:800px;
   width: 300px;
   height: 300px;
@@ -288,9 +286,8 @@ font-family: 'Roboto Mono', monospace;
 
 .moth-3 {
   position: absolute;
-  bottom: 600px;
-  left:2000px;
-  top:1500px;
+  left:1500px;
+  top:1300px;
   width: 300px;
   height: 300px;
 }
@@ -298,9 +295,8 @@ font-family: 'Roboto Mono', monospace;
 
 .tulip-about {
   position: absolute;
-  bottom: 600px;
-  left: 600px;
-  top:1000px;
+  left: 60px;
+  top:240px;
   width: 400px;
   height: 400px;
 }
