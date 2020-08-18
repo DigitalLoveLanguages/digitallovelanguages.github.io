@@ -96,6 +96,7 @@ $(document).ready(function() {
       'digital-love-projects-ephemera',
       'love-letters-to-a-speculative-liberatory-learning-environment',
       'code-as-a-gift',
+      'digital-love-looks',
       'people-r1w1odycp2i',
       'people-cdxyphwj0lo',
       'folder-poetry-fm8h1k8vsfk',
