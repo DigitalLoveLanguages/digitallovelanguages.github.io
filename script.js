@@ -114,7 +114,7 @@ $(document).ready(function() {
           var channelUrl = "channels/" + channel + "?per=100"
           console.log('++ fetching blocks from ' + channel);
           axiosArena.get(channelUrl).then(response => {
-            console.log(response);
+            // console.log(response);
             if (response.data && response.data.contents.length > 1) {
                for (let i=0; i<response.data.contents.length; i++) {
                  // set the channel title to be part of the block so we can access it later
@@ -222,11 +222,26 @@ $(document).ready(function() {
           }
 
           // append title of chanel
+          // const titleWrapper = document.createElement('a');
+          // titleWrapper.className = 'popupChannelTitle'
+          // titleWrapper.href = 'http://are.na/channels/' + block.channelSlug;
+          // titleWrapper.innerHTML = block.channelTitle;
+          // blockWrapper.appendChild(titleWrapper);
+          // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+
           const titleWrapper = document.createElement('a');
+          const titleBlockWrapper = document.createElement('div');
           titleWrapper.className = 'popupChannelTitle'
+          titleBlockWrapper.className = 'popupBlockTitle'
+          // make link to block?
           titleWrapper.href = 'http://are.na/channels/' + block.channelSlug;
           titleWrapper.innerHTML = block.channelTitle;
+          titleBlockWrapper.innerHTML = block.title;
           blockWrapper.appendChild(titleWrapper);
+          blockWrapper.appendChild(titleBlockWrapper);
+
+
 
           // if its an image
           if (block.image) {
@@ -255,6 +270,7 @@ $(document).ready(function() {
               // append to html
               blockWrapper.appendChild(descriptionWrapper);
           }
+
 
            // filter out empty blocks
           if (!block.image || !block.description || !block.content) {

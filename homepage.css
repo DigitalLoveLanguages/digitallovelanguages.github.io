@@ -16,6 +16,7 @@ src: url('fonts/VG5000/VG5000-Regular_web.woff') format('woff');
 
 
 
+
 .css-selector {
 
     background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff);
@@ -211,7 +212,6 @@ a.channel {
 
 .popupContent {
   color: white;
-    margin-top: 14px;
     padding: 1em;
     border: 2px dashed white;
     margin-bottom: 14px;
@@ -228,6 +228,8 @@ a.channel {
   position: relative;
   max-width: 600px;
   top: -140px;
+  font-size: .8em;
+font-family: 'Roboto Mono', monospace;
 }
 .linkswrapper:hover {
   cursor: pointer;
@@ -244,6 +246,13 @@ a.channel {
 .popupDescription {
   padding-bottom: 2.5em;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.popupBlockTitle {
+  color: #e3fd02;
+  font-size: .7em;
+  margin-bottom: 4px;
 }
 
 .popupChannelTitle {
@@ -255,6 +264,7 @@ a.channel {
     background-color: #e3fd02;
     width: fit-content;
     padding: 3px;
+    font-weight: 700;
 }
 
 .moth-1 {
