@@ -261,7 +261,7 @@ a.channel {
   position: absolute;
   bottom: 600px;
   left: 900px;
-  top:4000px;
+  top:2000px;
   width: 300px;
   height: 300px;
 }
@@ -270,8 +270,8 @@ a.channel {
 .moth-2 {
   position: absolute;
   bottom: 600px;
-  left: 300px;
-  top:1000px;
+  left: 200px;
+  top:800px;
   width: 300px;
   height: 300px;
 }
@@ -285,20 +285,12 @@ a.channel {
   height: 300px;
 }
 
-.moth-4 {
-  position: absolute;
-  bottom: 600px;
-  left: 1000px;
-  top:30000px;
-  width: 300px;
-  height: 300px;
-}
 
 .tulip-about {
   position: absolute;
   bottom: 600px;
   left: 600px;
-  top:20000px;
-  width: 300px;
-  height: 300px;
+  top:1000px;
+  width: 400px;
+  height: 400px;
 }
