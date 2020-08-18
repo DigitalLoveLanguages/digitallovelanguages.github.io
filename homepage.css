@@ -1,56 +1,80 @@
-
 /* border: 4px solid #e3fd02;
 padding: 20px;
 background-color: #3110B8; */
-
-
 @font-face {
-font-family: 'Minipax';
-src: url('fonts/Minipax/Minipax-Regular.woff') format('woff');
+  font-family: 'Minipax';
+  src: url('fonts/Minipax/Minipax-Regular.woff') format('woff');
 }
 
 @font-face {
-font-family: 'VG5000';
-src: url('fonts/VG5000/VG5000-Regular_web.woff') format('woff');
+  font-family: 'VG5000';
+  src: url('fonts/VG5000/VG5000-Regular_web.woff') format('woff');
 }
 
-
-
+html {
+  background-image: url("sky4.jpg");
+  background-size: 200%;
+  background-attachment: fixed;
+  -webkit-animation: AnimationName 360s ease infinite;
+  -moz-animation: AnimationName 360s ease infinite;
+  animation: AnimationName 360s ease infinite;
+}
 
 .css-selector {
-
-    background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff);
-    /* background-image: url("pool3.png"); */
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 190s ease infinite;
-    -moz-animation: AnimationName 190s ease infinite;
-    animation: AnimationName 190s ease infinite;
+  /* background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff); */
+  /* background-size: 200% 200%;
+    -webkit-animation: AnimationName 390s ease infinite;
+    -moz-animation: AnimationName 390s ease infinite;
+    animation: AnimationName 390s ease infinite; */
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
+  0% {
+    background-position: 0% 78%
+  }
+
+  50% {
+    background-position: 100% 23%
+  }
+
+  100% {
+    background-position: 0% 78%
+  }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
+  0% {
+    background-position: 0% 78%
+  }
+
+  50% {
+    background-position: 100% 23%
+  }
+
+  100% {
+    background-position: 0% 78%
+  }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
+  0% {
+    background-position: 0% 78%
+  }
+
+  50% {
+    background-position: 100% 23%
+  }
+
+  100% {
+    background-position: 0% 78%
+  }
 }
-
-
-
 
 .gradient-spin {
   left: 0;
-right: 0;
-margin-left: auto;
-margin-right: auto;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 200em;
   height: 200em;
   z-index: -1;
@@ -63,52 +87,37 @@ margin-right: auto;
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-
-
-
-  body {
-
-    color: #3111B9;
-    font-family: violet;
-    padding: 20px;
-    width: 3000px;
-    height: 3000px;
-    margin: 0;
-    word-break: break-word;
-
-    cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
-  }
-
-
-   a.mainLink {
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.325em;
-    text-transform: uppercase;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #F40305;
-    display: block;
-    margin-bottom: 12px;
-  }
+body {
+  color: #3111B9;
+  font-family: violet;
+  padding: 20px;
+  width: 3000px;
+  height: 3000px;
+  margin: 0;
+  word-break: break-word;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
 
 a:visited {
   text-decoration: none;
-  color:#3111B9; }
-
-a:hover {
-  color: black;
-  border-color: mediumpurple;
+  color: inherit;
 }
 
-
+a:hover {
+  text-decoration: underline;
+}
 
 p {
   font-size: 1.525em;
@@ -119,15 +128,86 @@ p {
   z-index: 10;
 }
 
- h4 {
+h4 {
   font-size: 3.525em;
   margin: 25px 0;
   max-width: 670px;
   font-family: Minipax;
 }
 
-h1 img{
+h1 img {
   width: 90vw;
+  mix-blend-mode: color-burn;
+}
+
+#about {
+  position: absolute;
+  left: 278px;
+  top: 480px;
+  font-size: 1.2em;
+  width: 474px;
+  font-family: 'Roboto Mono', monospace;
+  transform: rotate(-20deg);
+}
+
+#cursive {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.6em;
+  background-color: #3110B8 !important;
+  color: #989898 !important;
+}
+
+#class-page {
+  background-color: #908eef !important;
+}
+
+#cursive:hover, #class-page:hover {
+  color: #3110B8 !important;
+  background-color: #e3fd02 !important;
+}
+
+.hand-about {
+  position: absolute;
+  left: 91px;
+  top: 466px;
+  width: 474px;
+  transform: rotate(-6deg);
+  mix-blend-mode: color-burn;
+}
+
+.tulip {
+  position: absolute;
+  left: 900px;
+  top: 700px;
+  width: 400px;
+  transform: rotate(-6deg);
+}
+
+.moth-1 {
+  position: absolute;
+  left: 300px;
+  top: 1500px;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: color-burn;
+}
+
+.moth-2 {
+  position: absolute;
+  left: 600px;
+  top: 1400px;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: color-burn;
+}
+
+.moth-3 {
+  position: absolute;
+  left: 1500px;
+  top: 1300px;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: color-burn;
 }
 
 .fullwidth {
@@ -140,15 +220,49 @@ h1 img{
   color: chartreuse;
 }
 
-
 #orientation-blocks {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: 27em;
 }
 
+#about-container {
+  display: none;
+  z-index: 1000;
+  border: 4px solid #e3fd02;
+  padding: 20px;
+  background-color: #3110B8;
+  width: 600px;
+  color: white;
+  top: 696px;
+  left: 200px;
+  position: absolute;
+  font-size: .8em;
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: 4em;
+}
+
+#about-container img {
+  display: block;
+  margin: auto;
+  width: 500px;
+  margin-top: 2em;
+}
+
+#about-container a {
+  background-color: #e3fd02;
+  color: #3110B8;
+}
+
+#about-container p {
+  margin-top: 3em;
+  font-size: 1.3em;
+  width: 83%;
+  margin-left: 3em;
+}
 
 .block, .channel {
   padding: 15px;
@@ -181,43 +295,27 @@ a.channel {
 }
 
 .shadowfilter {
-	-webkit-filter: drop-shadow(9px 9px 9px rgba(0,0,0,0.6));
-}
-
-
-/* DESKTOP ONLY STYLES!! */
-@media only screen and (min-width: 768px) {
-  #orientation-blocks {
-    flex-direction: row;
-  }
-  .block,
-  .channel {
-    width: 32%;
-  }
-  .knot.two {
-    left: auto;
-    right: 18%;
-  }
-  .knot.three {
-    bottom: -8%;
-  }
+  -webkit-filter: drop-shadow(9px 9px 9px rgba(0, 0, 0, 0.6));
 }
 
 .blobImage {
   z-index: 5;
 }
+
+.random {
+  mix-blend-mode: color-burn;
+}
+
 .blobImage:hover {
   cursor: pointer;
 }
 
 .popupContent {
   color: white;
-    padding: 1em;
-    border: 2px dashed white;
-    margin-bottom: 14px;
+  padding: 1em;
+  border: 2px dashed white;
+  margin-bottom: 14px;
 }
-
-
 
 .linkswrapper {
   z-index: 10;
@@ -228,20 +326,21 @@ a.channel {
   position: relative;
   max-width: 600px;
   top: -140px;
+  left: 100px;
   font-size: .8em;
-font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
+
 .linkswrapper:hover {
   cursor: pointer;
 }
 
 .popupBlock {
   display: block;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
   /*border-bottom: 1px solid yellow;*/
 }
-
 
 .popupDescription {
   padding-bottom: 2.5em;
@@ -256,47 +355,46 @@ font-family: 'Roboto Mono', monospace;
 }
 
 .popupChannelTitle {
-    font-size: 14px;
-    display: block;
-    text-decoration: none;
-    color: #3110B8;
-    margin-bottom: 8px;
-    background-color: #e3fd02;
-    width: fit-content;
-    padding: 3px;
-    font-weight: 700;
+  font-size: 14px;
+  display: block;
+  text-decoration: none !important;
+  color: #3110B8;
+  margin-bottom: 8px;
+  background-color: #e3fd02;
+  width: fit-content;
+  padding: 3px;
+  font-weight: 700;
 }
 
-.moth-1 {
-  position: absolute;
-  left: 300px;
-  top:1500px;
-  width: 300px;
-  height: 300px;
+.popupChannelTitle:hover {
+  text-decoration: underline !important;
 }
 
+/* DESKTOP ONLY STYLES!! */
+@media only screen and (min-width: 768px) {
+  #orientation-blocks {
+    flex-direction: row;
+  }
 
-.moth-2 {
-  position: absolute;
-  left: 600px;
-  top:800px;
-  width: 300px;
-  height: 300px;
+  .block,
+  .channel {
+    width: 32%;
+  }
+
+  .knot.two {
+    left: auto;
+    right: 18%;
+  }
+
+  .knot.three {
+    bottom: -8%;
+  }
 }
 
-.moth-3 {
-  position: absolute;
-  left:1500px;
-  top:1300px;
-  width: 300px;
-  height: 300px;
-}
-
-
-.tulip-about {
-  position: absolute;
-  left: 60px;
-  top:240px;
-  width: 400px;
-  height: 400px;
+/* MOBILe ONLY STYLES!! */
+@media only screen and (max-width: 768px) {
+  html {
+    background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff);
+    background-attachment: fixed;
+  }
 }
