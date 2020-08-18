@@ -288,9 +288,9 @@ $(document).ready(function() {
 
   $(function() {
     $('.hand-about').hover(function() {
-      $('#about').fadeIn(3000);
+      $('#about').fadeIn(2000);
     }, function() {
-      $('#about').fadeOut(3000);
+      $('#about').fadeOut(2000);
     });
   });
 

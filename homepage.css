@@ -148,6 +148,7 @@ h1 img {
   width: 474px;
   font-family: 'Roboto Mono', monospace;
   transform: rotate(-20deg);
+  display: none;
 }
 
 #cursive {
