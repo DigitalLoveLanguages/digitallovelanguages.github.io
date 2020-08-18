@@ -288,7 +288,7 @@ $(document).ready(function() {
 
   $(function() {
     $('.hand-about').hover(function() {
-      $('#about').fadeIn(2000);
+      $('#about').fadeIn("slow");
     }, function() {
       $('#about').fadeOut(2000);
     });
