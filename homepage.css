@@ -255,7 +255,8 @@ h1 img {
       border: 4px solid #e3fd02;
       padding: 20px;
       background-color: #3110B8;
-      width: 190px;
+      width: 200px;
+      text-align: center;
       color: white;
       top: 1030px;
       left: 900px;
