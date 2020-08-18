@@ -186,29 +186,32 @@ h1 img {
 
 .moth-1 {
   position: absolute;
-  left: 300px;
+  left: 200px;
   top: 1500px;
   width: 300px;
   height: 300px;
+  opacity: .4;
   mix-blend-mode: color-burn;
 }
 
 .moth-2 {
   position: absolute;
-  left: 600px;
-  top: 1400px;
+  left: 2600px;
+  top: 2400px;
   width: 300px;
   height: 300px;
-  mix-blend-mode: color-burn;
+    mix-blend-mode: color-burn;
+  opacity: .4;
 }
 
 .moth-3 {
   position: absolute;
   left: 1500px;
-  top: 1300px;
+  top: 3300px;
   width: 300px;
   height: 300px;
   mix-blend-mode: color-burn;
+    opacity: .4;
 }
 
 .fullwidth {
@@ -244,6 +247,29 @@ h1 img {
   font-size: .8em;
   font-family: 'Roboto Mono', monospace;
   padding-bottom: 4em;
+}
+
+#welcome-container {
+  display: none;
+      z-index: 1000;
+      border: 4px solid #e3fd02;
+      padding: 20px;
+      background-color: #3110B8;
+      width: 190px;
+      color: white;
+      top: 1030px;
+      left: 900px;
+      position: absolute;
+      font-size: .8em;
+      font-family: 'Roboto Mono', monospace;
+}
+
+#welcome-container img {
+  filter: invert(100%);
+      width: 187px;
+      margin-top: 1em;
+      -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 #about-container img {

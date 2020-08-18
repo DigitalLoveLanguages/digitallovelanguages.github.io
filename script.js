@@ -309,4 +309,16 @@ $(document).ready(function() {
 
   });
 
+  $(function() {
+    $(".tulip").click(function() {
+      $("#welcome-container").toggle();
+    });
+  });
+
+  $(function() {
+    $("#welcome-container").click(function() {
+      $("#welcome-container").toggle();
+    });
+
+});
 });
