@@ -151,6 +151,29 @@ h1 img {
   display: none;
 }
 
+#about-container {
+  display: none;
+  z-index: 1000;
+  border: 4px solid #e3fd02;
+  padding: 20px;
+  background-color: #3110B8;
+  width: 600px;
+  color: white;
+  top: 696px;
+  left: 200px;
+  position: absolute;
+  font-size: .8em;
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: 4em;
+}
+
+#about-container img {
+  display: block;
+  margin: auto;
+  width: 500px;
+  margin-top: 2em;
+}
+
 #cursive {
   font-family: 'Cedarville Cursive', cursive;
   font-size: 1.6em;
@@ -233,21 +256,7 @@ h1 img {
   margin-top: 27em;
 }
 
-#about-container {
-  display: none;
-  z-index: 1000;
-  border: 4px solid #e3fd02;
-  padding: 20px;
-  background-color: #3110B8;
-  width: 600px;
-  color: white;
-  top: 696px;
-  left: 200px;
-  position: absolute;
-  font-size: .8em;
-  font-family: 'Roboto Mono', monospace;
-  padding-bottom: 4em;
-}
+
 
 #welcome-container {
   display: none;
@@ -273,12 +282,6 @@ h1 img {
   transform: scaleX(-1);
 }
 
-#about-container img {
-  display: block;
-  margin: auto;
-  width: 500px;
-  margin-top: 2em;
-}
 
 #about-container a {
   background-color: #e3fd02;
@@ -425,4 +428,88 @@ a.channel {
     background: linear-gradient(240deg, #d0f8ff, #eae0c6, #8cadff);
     background-attachment: fixed;
   }
+
+  .linkswrapper {
+    width: 500px;
+        left: 66px;
+  }
+
+  #about-container {
+    width: 500px;
+        color: white;
+        top: 440px;
+        left: 84px;
+        position: absolute;
+        font-size: .8em;
+        padding-bottom: 4em;
+        margin-right: 2em;
+  }
+
+  #about-container p {
+    margin-left: 2em;
+  }
+
+  #about {
+    display: block;
+  }
+
+  #about-container img {
+    width: 500px;
+    margin-top: 2em;
+  }
+
+  html {
+    background-size: 100%;
+  }
+
+  body {
+    padding: 20px;
+    width: 100vw;
+    height: 2000px;
+
+  }
+
+  h1 img {
+    width: 160%;
+}
+
+.hand-about {
+    left: 25px;
+    top: 267px;
+    width: 374px;
+}
+
+#about {
+  left: 164px;
+      top: 263px;
+      font-size: .9em;
+}
+
+#orientation-blocks {
+  margin-top: 10em;
+}
+
+
+  .tulip {
+    display: none;
+  }
+
+  .moth-1 {
+    left: 30%;
+    top: 4000px;
+    opacity: .15;
+  }
+
+  .moth-2 {
+    left: 80%;
+  top: 3000px;
+  opacity: .15;
+  }
+
+  .moth-3 {
+    left: 10%;
+  top: 2500px;
+  opacity: .15;
+  }
+
 }

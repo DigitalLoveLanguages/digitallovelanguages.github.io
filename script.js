@@ -101,7 +101,6 @@ $(document).ready(function() {
       'folder-poetry-fm8h1k8vsfk',
       'digital-love-languages-quotes',
       'passing-notes-lepghojthjg',
-      // 'digital-love-languages',
       'learning-growing-reaching-extending'
     ];
     for (let i = 0; i < listOfChannels.length; i++) {
